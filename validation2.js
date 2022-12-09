@@ -46,3 +46,16 @@ function validateMessage() {
     messageError.innerHTML = '<i class="fas fa-check-circle"></i>';
     return true;
 }
+function validateSubject() {
+    var subject = document.getElementById('subject').value;
+    var required = 10;
+    var left = required - subject.length;
+
+    if (left > 0) {
+        subjectError.innerHTML = left + ' more characters required';
+        return false;
+    }
+
+    subjectError.innerHTML = '<i class="fas fa-check-circle"></i>';
+    return true;
+}
